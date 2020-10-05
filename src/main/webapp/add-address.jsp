@@ -21,11 +21,11 @@
 				<form:label path="name">Name</form:label>
 				<form:input path="name" type="text" class="form-control"
 					required="required" />
-				<form:errors path="desc" cssClass="text-warning" />
+				<form:errors path="name" cssClass="text-warning" />
 			</fieldset>
 			
 			<fieldset class="form-group">
-				<form:label path="address">address</form:label>
+				<form:label path="address">Address</form:label>
 				<form:input path="address" type="text" class="form-control"
 					required="required" />
 				<form:errors path="address" cssClass="text-warning" />
@@ -49,14 +49,17 @@
 				<form:errors path="country" cssClass="text-warning" />
 			</fieldset>
 			<fieldset class="form-group">
-				<form:label path="Zipcode">Zipcode</form:label>
-				<form:input path="Zipcode" type="text" class="form-control"
+				<form:label path="zip">Zipcode</form:label>
+				<form:input path="zip" type="text" class="form-control"
 					required="required" />
-				<form:errors path="Zipcode" cssClass="text-warning" />
+				<form:errors path="zip" cssClass="text-warning" />
 			</fieldset>
-	
-			
-	
+				<fieldset class="form-group">
+				<form:label path="updatedDate">Updated Date </form:label>
+				<form:input path="updatedDate" type="text" class="form-control"
+					required="required" />
+				<form:errors path="updatedDate" cssClass="text-warning" />
+			</fieldset>
 			<button type="submit" class="btn btn-success">Add</button>
 		</form:form>
 	</div>

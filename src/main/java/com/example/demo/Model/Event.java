@@ -31,6 +31,18 @@ public class Event {
     @ManyToOne
     @JoinColumn(name="created_by")
     private User createdBy;
+	@Column(name = "deleted", columnDefinition="BOOLEAN DEFAULT false")
+	private Boolean deleted=false;
+
+
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
     
     public Event() {
     	

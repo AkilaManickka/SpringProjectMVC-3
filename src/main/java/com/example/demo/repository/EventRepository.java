@@ -10,5 +10,5 @@ import com.example.demo.Model.Event;
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
 
-	List<Event> findByCreatedByUsername(String username);
+	List<Event> findByCreatedByUsernameAndDeletedIsFalse(String username);
 }

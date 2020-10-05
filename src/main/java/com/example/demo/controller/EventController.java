@@ -20,10 +20,14 @@ import com.example.demo.Model.Event;
 import com.example.demo.service.EventService;
 import com.example.demo.service.UserService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 
 @Controller
-public class EventController {
+public class EventController { 
+	private static final Logger log = LoggerFactory.getLogger(EventController.class);
 	
     @Autowired
     

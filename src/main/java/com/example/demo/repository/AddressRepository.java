@@ -11,6 +11,6 @@ import com.example.demo.Model.Address;
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Long>{
 	
-	//List<Address> findByCreatedByUsername(String username);
+	List<Address> findByUpdatedByUsernameAndDeletedIsFalse(String username);
 
 }

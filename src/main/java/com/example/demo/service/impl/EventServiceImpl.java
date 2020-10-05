@@ -26,7 +26,10 @@ public class EventServiceImpl implements EventService {
     
     @Override
     public void delete(Long id) {
-    	eventRepository.deleteById(id);
+    	//eventRepository.deleteById(id);
+    	Event event=eventRepository.getOne(id);
+    	event.setDeleted(true);
+    	eventRepository.save(event);
     }
 
     @Override
@@ -38,7 +41,7 @@ public class EventServiceImpl implements EventService {
     
     @Override
     public List<Event> findUserEvents(String username) {
-    	return eventRepository.findByCreatedByUsername(username);
+    	return eventRepository.findByCreatedByUsernameAndDeletedIsFalse(username);
     }
 
 
